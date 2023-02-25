@@ -2,8 +2,90 @@
   border: solid 1px salmon;
 }
 
-div {
-  min-height: 50vh;
-  min-width: 50vh;
-  color: blue;
+.main-container {
+  margin: 5%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.add-button-div {
+  display: flex;
+  justify-content: center;
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 35%;
+  min-height: 10vh;
+  margin: 5%;
+  padding: 2%;
+  border-radius: 10px;
+  border-style: none;
+}
+
+.add-expense-popup {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  align-items: flex-start;
+  margin: 5%;
+  border: solid 1px silver;
+}
+
+.add-expense-popup form .label-newline {
+  display: block;
+}
+
+.banner {
+  margin: 5%;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 5%;
+}
+
+.dashboard .dashboard-heading {
+  font-weight: bold;
+  display: flex;
+}
+
+.dashboard .dashboard-heading span {
+  display: flex;
+  width: 20%;
+  /* border: 1px red solid; */
+}
+
+.dashboard .dashboard-heading .wider {
+  width: 30%;
+}
+
+.dashboard .dashboard-results span {
+  display: inline-block;
+  width: 20%;
+  vertical-align: top;
+}
+
+.dashboard .dashboard-results .wider {
+  width: 30%;
+}
+
+.site-banner {
+  background-color: pink;
+  align-self: stretch;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .add-button button {
+    min-width: 7.5rem;
+    margin: 0;
+  }
 }
