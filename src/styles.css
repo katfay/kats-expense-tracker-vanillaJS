@@ -3,7 +3,7 @@
 }
 
 .main-container {
-  margin: 5%;
+  margin: 2%;
   display: flex;
   flex-flow: column;
 }
@@ -13,16 +13,16 @@ a {
   color: black;
 }
 
-.add-button-div {
-  display: flex;
-  justify-content: center;
-}
-
 form {
   display: flex;
   flex-flow: column;
   align-items: stretch;
   min-width: 100%;
+}
+
+.add-button-div {
+  display: flex;
+  justify-content: center;
 }
 
 .add-button,
@@ -31,7 +31,7 @@ form {
   align-items: center;
   justify-content: center;
   align-self: center;
-  min-width: 35%;
+  min-width: 30vh;
   min-height: 10vh;
   margin: 5%;
   padding: 2%;
@@ -45,7 +45,7 @@ form {
   align-items: flex-start;
   align-self: center;
   max-width: 500px;
-  margin: 5%;
+  margin: 1%;
   border: solid 1px silver;
   font-family: sans-serif;
   background-color: bisque;
@@ -65,14 +65,14 @@ input {
 }
 
 .banner {
-  margin: 5%;
+  margin: 1%;
 }
 
 .dashboard {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  margin: 5%;
+  margin: 1%;
 }
 
 .dashboard .dashboard-heading {
@@ -97,6 +97,9 @@ input {
 }
 
 .popup {
+  display: none;
+  /* display: flex; */
+  justify-content: center;
   border: solid 2px paleturquoise;
 }
 

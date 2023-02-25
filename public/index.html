@@ -9,7 +9,6 @@
   </head>
   <body>
     <div class="test-border main-container">
-      Main container test-border
       <div class="banner">
         <header class="site-banner">Kat's expense dashboard</header>
       </div>
@@ -18,7 +17,8 @@
           <button class="add-button" type="button" id="">Add (button)</button>
         </a>
       </div>
-      <div>
+      <!-- The popup div wraps the add expense popup and visibility is toggled by the 'Add' button (Vanilla JS) -->
+      <div class="popup">
         <div class="add-expense-popup">
           <h1>Add an expense (pop-up)</h1>
           <form>
@@ -51,7 +51,7 @@
             />
           </form>
           <button id="#addExpenseButton" type="submit" class="expense-button">
-            Add
+            Add expense
           </button>
         </div>
       </div>
