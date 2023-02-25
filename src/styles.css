@@ -4,6 +4,8 @@
 
 .main-container {
   margin: 5%;
+  display: flex;
+  flex-flow: column;
 }
 
 a {
@@ -16,10 +18,19 @@ a {
   justify-content: center;
 }
 
-.add-button {
+form {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  min-width: 100%;
+}
+
+.add-button,
+.expense-button {
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: center;
   min-width: 35%;
   min-height: 10vh;
   margin: 5%;
@@ -31,14 +42,26 @@ a {
 .add-expense-popup {
   display: flex;
   flex-direction: column;
-  max-width: 500px;
   align-items: flex-start;
+  align-self: center;
+  max-width: 500px;
   margin: 5%;
   border: solid 1px silver;
+  font-family: sans-serif;
+  background-color: bisque;
 }
 
-.add-expense-popup form .label-newline {
+.label-newline,
+select,
+input {
   display: block;
+  margin: 0.5rem;
+}
+
+select,
+input {
+  min-height: 2rem;
+  text-align: center;
 }
 
 .banner {
@@ -73,7 +96,10 @@ a {
   vertical-align: top;
 }
 
-.dashboard .dashboard-results .wider {
+.expense-button {
+}
+
+.wider {
   width: 30%;
 }
 
