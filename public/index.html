@@ -18,42 +18,43 @@
           <button class="add-button" type="button" id="">Add (button)</button>
         </a>
       </div>
-      <div class="add-expense-popup">
-        <h1>Add an expense (pop-up)</h1>
-        <form>
-          <label for="expense-select" class="label-newline">
-            Expense type
-          </label>
-          <select name="expenseType" id="expense-select">
-            <option value="">--Please choose an option--</option>
-            <option value="food">Food</option>
-            <option value="bills">Bills</option>
-            <option value="learning">Work</option>
-            <option value="holidays">Holidays</option>
-            <option value="social">Social</option>
-            <option value="hobbies">Hobbies</option>
-            <option value="health">Health</option>
-            <option value="gifts">Gifts</option>
-            <option value="charity">Charity</option>
-            <option value="clothes">Clothes & grooming</option>
-            <option value="savings">Savings</option>
-          </select>
-          <label for="amountEntered" class="label-newline"> Amount </label>
-          <input id="#amountEntered" type="number" placeholder="$0" />
-          <label for="dateEntered" class="label-newline"> Date </label>
-          <input id="#dateEntered" type="date" placeholder="Date" />
-          <label for="messageEntered" class="label-newline"> Notes </label>
-          <input
-            id="#messageEntered"
-            type="text"
-            placeholder="e.g. 'Croissant from Gordon St Bakery 🥐🧡'"
-          />
-        </form>
-        <button id="#addExpenseButton" type="submit" class="expense-button">
-          Add
-        </button>
+      <div>
+        <div class="add-expense-popup">
+          <h1>Add an expense (pop-up)</h1>
+          <form>
+            <label for="expense-select" class="label-newline">
+              Expense type
+            </label>
+            <select name="expenseType" id="expense-select">
+              <option value="">--Please choose an option--</option>
+              <option value="food">Food</option>
+              <option value="bills">Bills</option>
+              <option value="learning">Work</option>
+              <option value="holidays">Holidays</option>
+              <option value="social">Social</option>
+              <option value="hobbies">Hobbies</option>
+              <option value="health">Health</option>
+              <option value="gifts">Gifts</option>
+              <option value="charity">Charity</option>
+              <option value="clothes">Clothes & grooming</option>
+              <option value="savings">Savings</option>
+            </select>
+            <label for="amountEntered" class="label-newline"> Amount </label>
+            <input id="#amountEntered" type="number" placeholder="$0" />
+            <label for="dateEntered" class="label-newline"> Date </label>
+            <input id="#dateEntered" type="date" placeholder="Date" />
+            <label for="messageEntered" class="label-newline"> Notes </label>
+            <input
+              id="#messageEntered"
+              type="text"
+              placeholder="e.g. 'Croissant from Gordon St Bakery 🥐🧡'"
+            />
+          </form>
+          <button id="#addExpenseButton" type="submit" class="expense-button">
+            Add
+          </button>
+        </div>
       </div>
-
       <div class="test-border dashboard">
         <div class="dashboard-heading">
           <span class="wider">Expense type</span> <span>Amount</span>
