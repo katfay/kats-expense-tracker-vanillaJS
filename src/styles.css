@@ -1,0 +1,9 @@
+.test-border {
+  border: solid 1px salmon;
+}
+
+div {
+  min-height: 50vh;
+  min-width: 50vh;
+  color: blue;
+}

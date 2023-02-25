@@ -1,5 +1,25 @@
 {
   "dependencies": {
-    "dotenv": "^16.0.3"
-  }
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20"
+  },
+  "name": "kats-expense-tracker-vanillajs",
+  "description": "My first node project.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katfay/kats-expense-tracker-vanillaJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katfay/kats-expense-tracker-vanillaJS/issues"
+  },
+  "homepage": "https://github.com/katfay/kats-expense-tracker-vanillaJS#readme"
 }
