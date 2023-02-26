@@ -21,7 +21,7 @@ let addButton = document.getElementById("#addButton");
 /* Assign a click event listener, to the 'Add' button, that calls a function to handle the click */
 addButton.addEventListener("click", handleAddButtonClick);
 
-/* When the 'Add' button is clicked, show the Add an Expenses popup on the dashboard */
+/* Show the Add an Expenses popup on the dashboard when the 'Add' button is clicked */
 function showPopUp() {
   /* Assign a variable name to the div wrapping the 'Add an expense' popup */
   let popUpWrap = document.getElementById("#popUpWrap");
@@ -30,7 +30,7 @@ function showPopUp() {
   popUpWrap.style.display = "flex";
 }
 
-/* When the 'Add' button is clicked, hide it */
+// Hide the 'Add' button when it is clicked
 function handleAddButtonClick() {
   /* Check the function has been called */
   console.log("You clicked the add button");
