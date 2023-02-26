@@ -13,14 +13,12 @@
         <header class="site-banner">Kat's expense dashboard</header>
       </div>
       <div class="add-button-div">
-        <a href="/add-expense" target="_blank">
-          <button class="add-button" type="button" id="#addButton">
-            Add (button)
-          </button>
-        </a>
+        <button class="add-button" type="button" id="#addButton">
+          Add (button)
+        </button>
       </div>
       <!-- The popup div wraps the add expense popup and visibility is toggled by the 'Add' button (Vanilla JS) -->
-      <div class="popup">
+      <div class="popup" id="#popUpWrap">
         <div class="add-expense-popup">
           <h1>Add an expense (pop-up)</h1>
           <form>
