@@ -11,3 +11,11 @@ require("dotenv").config();
 
 console.log("node started");
 console.log("js is working");
+
+let addButton = document.getElementById("#addButton");
+
+addButton.addEventListener("click", handleAddButtonClick);
+
+function handleAddButtonClick() {
+  alert("You clicked the add button");
+}
