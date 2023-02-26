@@ -97,8 +97,8 @@ input {
 }
 
 .popup {
-  display: flex;
   /* display: flex; */
+  display: none;
   justify-content: center;
   border: solid 2px paleturquoise;
 }
