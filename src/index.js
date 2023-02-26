@@ -21,13 +21,26 @@ let addButton = document.getElementById("#addButton");
 /* Assign a click event listener, to the 'Add' button, that calls a function to handle the click */
 addButton.addEventListener("click", handleAddButtonClick);
 
-// When the 'Add' button is clicked, XXX
-function handleAddButtonClick() {
-  console.log("You clicked the add button");
-
+/* When the 'Add' button is clicked, show the Add an Expenses popup on the dashboard */
+function showPopUp() {
   /* Assign a variable name to the div wrapping the 'Add an expense' popup */
   let popUpWrap = document.getElementById("#popUpWrap");
 
   /* Change the CSS display setting to show the pop up on the dashboard */
   popUpWrap.style.display = "flex";
+}
+
+/* When the 'Add' button is clicked, hide it */
+function handleAddButtonClick() {
+  /* Check the function has been called */
+  console.log("You clicked the add button");
+
+  /* Assign a variable to the 'Add' button wrapper */
+  let addButtonWrap = document.getElementById("#addButtonWrap");
+
+  /* Change the CSS display setting to show the pop up on the dashboard */
+  addButtonWrap.style.display = "none";
+
+  // Call a function to show the popUp wrapper
+  showPopUp();
 }
