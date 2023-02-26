@@ -21,7 +21,7 @@
       <div class="popup" id="#popUpWrap">
         <div class="add-expense-popup">
           <h1>Add an expense (pop-up)</h1>
-          <form>
+          <form id="#expense">
             <label for="expense-select" class="label-newline">
               Expense type
             </label>
@@ -49,9 +49,16 @@
               type="text"
               placeholder="e.g. 'Croissant from Gordon St Bakery 🥐🧡'"
             />
-          </form>
-          <button id="#addExpenseButton" type="submit" class="expense-button">
+          
+          <button
+            id="#addExpenseButton"
+            type="submit"
+            class="expense-button"
+            form="#expense"
+            formmethod=""
+          >
             Add expense
+            </form>
           </button>
         </div>
       </div>
