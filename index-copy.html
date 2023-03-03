@@ -12,20 +12,20 @@
       <div class="banner">
         <header class="site-banner">Kat's expense dashboard</header>
       </div>
-      <div class="add-button-div" id="addButtonWrap">
-        <button class="add-button" type="button" id="addButton">
+      <div class="add-button-div" id="#addButtonWrap">
+        <button class="add-button" type="button" id="#addButton">
           Add (button)
         </button>
       </div>
       <!-- The popup div wraps the add expense popup and visibility is toggled by the 'Add' button (Vanilla JS) -->
-      <div class="popup" id="popUpWrap">
+      <div class="popup" id="#popUpWrap">
         <div class="add-expense-popup">
           <h1>Add an expense (pop-up)</h1>
-          <form id="expense" action="http://localhost:3000/expense/" method="POST">
-            <label for="expense-select" class="label-newline" >
+          <form id="#expense">
+            <label for="expense-select" class="label-newline">
               Expense type
             </label>
-            <select name="expense" id="expense-select">
+            <select name="expenseType" id="expense-select">
               <option value="">--Please choose an option--</option>
               <option value="food">Food</option>
               <option value="bills">Bills</option>
@@ -40,17 +40,23 @@
               <option value="savings">Savings</option>
             </select>
             <label for="amountEntered" class="label-newline"> Amount </label>
-            <input name="amount" id="amountEntered" type="number" placeholder="$0" />
+            <input id="#amountEntered" type="number" placeholder="$0" />
             <label for="dateEntered" class="label-newline"> Date </label>
-            <input name="date" id="dateEntered" type="date" placeholder="Date" />
+            <input id="#dateEntered" type="date" placeholder="Date" />
             <label for="messageEntered" class="label-newline"> Notes </label>
             <input
-            name="notes"  
-            id="messageEntered"
+              id="#messageEntered"
               type="text"
               placeholder="e.g. 'Croissant from Gordon St Bakery 🥐🧡'"
             />
-          <input value="Add your expense" type="submit" id="addExpense">
+          
+          <button
+            id="addExpenseButton"
+            type="submit"
+            class="expense-button"
+            form="#expense"
+            formmethod="post"
+          >
             Add expense
             </form>
           </button>
