@@ -76,5 +76,7 @@ function showExpenses() {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
+      alert(data);
+      document.getElementById("dashboardResults").innerHTML = data;
     });
 }
