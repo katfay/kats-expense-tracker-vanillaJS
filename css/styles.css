@@ -98,9 +98,10 @@ input {
   align-items: stretch;
 }
 
-.dashboard .dashboard-results span {
+.dashboard .dashboard-results div {
   display: inline-block;
-  width: 20%;
+  min-width: 20%;
+
   vertical-align: top;
 }
 
@@ -117,9 +118,9 @@ input {
   text-align: center;
 }
 
-.wider {
-  width: 30%;
-}
+/* .wider {
+  min-width: 30%;
+} */
 
 @media (min-width: 600px) {
   .add-button button {
