@@ -81,28 +81,15 @@ function showExpenses() {
   fetch("http://localhost:3000/expense/list")
     .then((res) => res.json())
     .then((data) => {
-      /*
-      let spending = console.log(data);
-            spending.forEach(function (spend) {
-        alert("I have bought " + data[0].expense);
-      });
-*/
       console.table(data);
       console.log(data);
-      document.getElementById("dashboardResults").innerHTML = data[0].expense;
-      for (let x = 0; x < data.length; x++) {
-        console.log(data[x].expense);
-        /*        document.getElementById("dashboardResults").innerHTML =
-          data[x].expense + " help, I need to append a new line";
-          */
-        let dashboardElement = document.getElementById("dashboardResults");
-        let dashboardHTML = `<div>`;
-        data.forEach(function (expenseItem) {
-          dashboardHTML = dashboardHTML + `<div>${expenseItem.amount}</div>`;
-        });
-        dashboardHTML = dashboardHTML + `</div>`;
-        dashboardElement.innerHTML = dashboardHTML;
-        console.log(dashboardHTML);
-      }
+      let dashboardElement = document.getElementById("dashboardResults");
+      let dashboardHTML = `<div>`;
+      data.forEach(function (expenseItem) {
+        dashboardHTML = dashboardHTML + `<div>${expenseItem.expense}</div>`;
+      });
+      dashboardHTML = dashboardHTML + `</div>`;
+      dashboardElement.innerHTML = dashboardHTML;
+      console.log(dashboardHTML);
     });
 }

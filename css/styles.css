@@ -3,7 +3,7 @@
 }
 
 .main-container {
-  margin: 2%;
+  margin: 5%;
   display: flex;
   flex-flow: column;
 }
@@ -82,12 +82,20 @@ input {
 
 .dashboard .dashboard-heading span {
   display: flex;
-  width: 20%;
+  min-width: 20%;
   /* border: 1px red solid; */
 }
 
-.dashboard .dashboard-heading .wider {
-  width: 30%;
+.dashboard .dashboard-heading .wider,
+.dashboard .dashboard-results .wider {
+  min-width: 30%;
+}
+
+.dashboard .dashboard-results,
+.dashboard .dashboard-results div {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
 }
 
 .dashboard .dashboard-results span {
