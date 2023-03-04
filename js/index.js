@@ -77,19 +77,59 @@ document.getElementById("showButton").addEventListener("click", showExpenses);
 }
 */
 
+function showAllExpenseNotes(data) {
+  let notesElement = document.getElementById("expenseNotes");
+  let notesHTML = `<div>`;
+  data.forEach(function (expenseItem) {
+    notesHTML = notesHTML + `<div>${expenseItem.notes}</div>`;
+  });
+  notesHTML = notesHTML + `</div>`;
+  notesElement.innerHTML = notesHTML;
+  console.log(notesHTML);
+}
+
+function showAllExpenseDates(data) {
+  let dateElement = document.getElementById("expenseDates");
+  let dateHTML = `<div>`;
+  data.forEach(function (expenseItem) {
+    dateHTML = dateHTML + `<div>${expenseItem.date}</div>`;
+  });
+  dateHTML = dateHTML + `</div>`;
+  dateElement.innerHTML = dateHTML;
+  console.log(dateHTML);
+}
+
+function showAllExpenseAmounts(data) {
+  let amountElement = document.getElementById("expenseAmounts");
+  let amountHTML = `<div>`;
+  data.forEach(function (amountItem) {
+    amountHTML = amountHTML + `<div>${amountItem.amount}</div>`;
+  });
+  amountHTML = amountHTML + `</div>`;
+  amountElement.innerHTML = amountHTML;
+  console.log(amountHTML);
+}
+
+function showAllExpenseTypes(data) {
+  let expenseElement = document.getElementById("expenseTypes");
+  let expenseHTML = `<div>`;
+  data.forEach(function (expenseItem) {
+    expenseHTML = expenseHTML + `<div>${expenseItem.expense}</div>`;
+  });
+  expenseHTML = expenseHTML + `</div>`;
+  expenseElement.innerHTML = expenseHTML;
+  console.log(expenseHTML);
+}
+
 function showExpenses() {
   fetch("http://localhost:3000/expense/list")
     .then((res) => res.json())
     .then((data) => {
       console.table(data);
       console.log(data);
-      let dashboardElement = document.getElementById("dashboardResults");
-      let dashboardHTML = `<div>`;
-      data.forEach(function (expenseItem) {
-        dashboardHTML = dashboardHTML + `<div>${expenseItem.expense}</div>`;
-      });
-      dashboardHTML = dashboardHTML + `</div>`;
-      dashboardElement.innerHTML = dashboardHTML;
-      console.log(dashboardHTML);
+      showAllExpenseTypes(data);
+      showAllExpenseAmounts(data);
+      showAllExpenseDates(data);
+      showAllExpenseNotes(data);
     });
 }

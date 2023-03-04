@@ -79,29 +79,30 @@ input {
   font-weight: bold;
   display: flex;
 }
-
+/* Setting min. width for headings of expense results */
 .dashboard .dashboard-heading span {
   display: flex;
   min-width: 20%;
   /* border: 1px red solid; */
 }
 
+/* Giving more room (width) for contents of expense type and notes headings and lists */
 .dashboard .dashboard-heading .wider,
 .dashboard .dashboard-results .wider {
   min-width: 30%;
 }
 
-.dashboard .dashboard-results,
-.dashboard .dashboard-results div {
+/* So that div containers in the results dashboard are side-by-side and fill out the available space */
+.dashboard .dashboard-results {
   display: flex;
   flex-direction: row;
   align-items: stretch;
 }
 
+/* Setting min. width for all side-by-side expense results divs */
 .dashboard .dashboard-results div {
-  display: inline-block;
+  /* display: inline-block; */
   min-width: 20%;
-
   vertical-align: top;
 }
 
