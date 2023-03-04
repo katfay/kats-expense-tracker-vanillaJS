@@ -69,7 +69,9 @@ let addExpenseButton = document.getElementById("addExpense");
 /* Assign a submit event listener, to the 'Add Expense' button, that calls a function to handle the click */
 addExpenseButton.addEventListener("click", hidePopUp);
 
-document.getElementById("showButton").addEventListener("click", showExpenses);
+document
+  .getElementById("showButton")
+  .addEventListener("click", retrieveExpenses);
 
 /*function prettifyExpenses(data) {
 
@@ -121,12 +123,19 @@ function showAllExpenseTypes(data) {
   console.log(expenseHTML);
 }
 
-function showExpenses() {
+// Retrieve the user's expenses from the database
+function retrieveExpenses() {
+  // Fetch file with user's expenses from the local server hosting the relevant database file. This is the file containing the user's responses to the 'Add an expense' form
   fetch("http://localhost:3000/expense/list")
+    // Convert the fetched response to a JSON format
     .then((res) => res.json())
+    // Pass this JSON response through my custom function
     .then((data) => {
-      console.table(data);
       console.log(data);
+      // See the user's expenses in JSON format in a table in the console so I can debug
+      console.table(data);
+
+      // Call custom functions that will put the user's responses about expense types, $$, amounts and notes into the frontend
       showAllExpenseTypes(data);
       showAllExpenseAmounts(data);
       showAllExpenseDates(data);
