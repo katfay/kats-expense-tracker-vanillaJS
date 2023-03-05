@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>Dog mood tracker 🐾 🌈 🌩 🎻 (🍦JS)</title>
+    <title>Kat's expense tracker (🍦JS)</title>
   </head>
   <body>
     <div class="test-border main-container">
       <div class="banner">
-        <header class="site-banner">Dog mood tracker 🐾 🌈 🌩 🎻 (🍦JS) dashboard</header>
+        <header class="site-banner">Kat's expense dashboard</header>
       </div>
       <div class="add-button-div" id="addButtonWrap">
         <button class="add-button" type="button" id="addButton">
@@ -21,28 +21,23 @@
       <div class="popup" id="popUpWrap">
         <div class="add-expense-popup">
           <h1>Add an expense (pop-up)</h1>
-          <form id="expense" action="" method="">
+          <form id="expense" action="http://localhost:3000/expense/" method="POST">
             <label for="expense-select" class="label-newline" >
               Expense type
             </label>
-            <select name="mood" id="">
-              <option value="">--What mood is your good boy showing?--</option>
-              <option value="">Sulk</option>
-              <option value="">Cry</option>
-              <option value="">Growl</option>
-              <option value="">Pathos</option>
-              <option value="">Scream</option>
-              <option value="">Delight</option>
-              <option value="">Pride</option>
-              <option value="">Joy</option>
-              <option value="">Hypervigilance</option>
-              <option value="">Flat</option>
-              <option value="">Huff</option>
-              <option value="">Indignance</option>
-              <option value="">Outrage</option>
-              <option value="">Pure outrage</option>
-              <option value="">Cuddles</option>
-              <option value="">Excitement</option>
+            <select name="expense" id="expense-select">
+              <option value="">--Please choose an option--</option>
+              <option value="food">Food</option>
+              <option value="bills">Bills</option>
+              <option value="learning">Work</option>
+              <option value="holidays">Holidays</option>
+              <option value="social">Social</option>
+              <option value="hobbies">Hobbies</option>
+              <option value="health">Health</option>
+              <option value="gifts">Gifts</option>
+              <option value="charity">Charity</option>
+              <option value="clothes">Clothes & grooming</option>
+              <option value="savings">Savings</option>
             </select>
             <label for="amountEntered" class="label-newline"> Amount </label>
             <input name="amount" id="amountEntered" type="string" placeholder="$0" />
@@ -53,7 +48,7 @@
             name="notes"  
             id="messageEntered"
               type="text"
-              placeholder="e.g. 'Developed near fear: foam rollers 🤷🏼‍♀️ 🐾 💔'"
+              placeholder="e.g. 'Croissant from Gordon St Bakery 🥐🧡'"
             />
           <input value="Add your expense" type="submit" id="addExpense">
             </form>
@@ -67,15 +62,15 @@
           <span class="wider">Notes</span>
         </div>
         <div class="dashboard-results" id="">
-          <!-- <div>Placeholder wrapper for show/hiding mood information</div> -->
-          <div class="wider" id="expenseTypes">placeholder</div>
-          <div class="" id="expenseAmounts">placeholder</div>
-          <div class="" id="expenseDates">placeholder</div>
-          <div class="wider" id="expenseNotes">placeholder</div>
+          <!-- <div>Placeholder for show expenses information</div> -->
+          <div class="wider" id="expenseTypes">expense type placeholder</div>
+          <div class="" id="expenseAmounts">amount result placeholder</div>
+          <div class="" id="expenseDates">date result placeholder</div>
+          <div class="wider" id="expenseNotes">notes result placeholder</div>
         </div>  
         <div>
           <button class="" type="button" id="showButton">
-          Show Duncan's mood dashboard (button)
+          Show my spending dashboard (button)
           </button>
         </div>
     </div>
