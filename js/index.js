@@ -1,3 +1,4 @@
+// This version works
 // First off, check index.js is connected to index.html
 console.log("js is working");
 
@@ -57,7 +58,7 @@ function showAllExpenseTypes(data) {
 // Retrieve the user's expenses from the database
 function retrieveExpenses() {
   // Fetch the file containing the user's responses to the 'Add an expense' form. This is first retrieved from the cloud database and then hosted on a local server as an API, using a middleware function.
-  fetch("http://localhost:3000/expense/list")
+  fetch("http://localhost:5000/expense/list")
     // Convert the fetched response to a JSON format.
     .then((res) => res.json())
     // Pass this JSON response through my custom function
